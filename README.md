@@ -1,5 +1,3 @@
-# 🧾 Générateur de CV à Étapes
-
 ## 🎯 Description du projet
 Ce projet est une application web permettant de **créer un CV professionnel** à l’aide d’un **formulaire à étapes (stepper form)**.  
 L’utilisateur peut saisir ses informations personnelles, ses compétences, ses expériences et bien plus encore, puis **prévisualiser et télécharger son CV** sous forme de modèle personnalisé.

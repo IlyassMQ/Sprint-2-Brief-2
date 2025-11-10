@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="./assets/style.css">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+      <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <header>
+         <nav>
+            <div class="navbar h-[8vh] p-5 mx-5 border-b border-b-green-500">
+               <a class="text-3xl text-white" href="#">Struo<span class="text-green-500">CV</span></a>
+            </div>
+         </nav>
+      </header>
+      <main class="flex flex-col items-center justify-center px-6">
+         <section class="text-center mt-8 mb-8">
+            <h1 class="text-3xl font-semibold text-white">Créez Votre <span class="text-green-500">CV Professionnel</span></h1>
+            <p class="text-gray-600 mt-2">Remplissez les informations ci-dessous pour commencer.</p>
+         </section>
+         <section class="w-full max-w-3xl mb-8">
+            <div class="flex justify-between items-center">
+               <div class="step-1 flex flex-col items-center">
+                  <div class="circle w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center font-bold">1</div>
+               </div>
+               <div class="line flex-1 h-0.5 bg-gray-300"></div>  <!--line -->
+              
+               <div class="step-2 flex flex-col items-center">
+                  <div class="circle w-10 h-10 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">2</div>
+               </div>
+               <div class="line flex-1 h-0.5 bg-gray-300"></div>  <!--line -->
+              
+               <div class="step-3 flex flex-col items-center">
+                  <div class="circle w-10 h-10 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">3</div>
+               </div>
+               <div class="line flex-1 h-0.5 bg-gray-300"></div> <!--line -->
+               
+               <div class="step-4 flex flex-col items-center">
+                  <div class="circle w-10 h-10 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">4</div>
+               </div>
+                <div class="line flex-1 h-0.5 bg-gray-300"></div>  <!--line -->
+
+                <div class="step-5 flex flex-col items-center">
+                  <div class="circle w-10 h-10 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">5</div>
+                </div>
+                <div class="line flex-1 h-0.5 bg-gray-300"></div>  <!--line -->
+
+                <div class="step-6 flex flex-col items-center">
+                  <div class="circle w-10 h-10 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">6</div>
+                </div>
+
+            </div>
+         </section>
+         <!--------------------------------------- FORM PERSSONEL  ----------->
+         <section class="w-full max-w-3xl bg-white rounded-lg p-8 border border-gray-200">
+            <form action="#" method="POST" class="space-y-6" id="form-1">
+               <div id="form-title" class="block text-center text-3xl">
+                  <h2 style="font-family: Noto Sans TC, sans-serif; font-weight: bolder;">Informations Perssonnel</h2>
+               </div>
+               <div class="flex space-x-6 items-center">
+                  <div class="w-1/4">
+                     <label class="custum-file-upload" for="file">
+                        <div class="icon">
+                           <img src="/assets/img/photo-svgrepo-com.svg" alt="img">
+                        </div>
+                        <div class="text">
+                           <span>Ajouter une photo</span>
+                        </div>
+                        <input type="file" id="file" style="display: none;">
+                     </label>
+                  </div>
+                  <div class="flex gap-5">
+                     <div class="w-1/2">
+                        <label for="prenom" class="block text-gray-700 font-medium mb-2">Prenom*</label>
+                        <input type="text" id="prenom" name="prenom" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700">
+                     </div>
+                     <div class="w-1/2">
+                        <label for="nom" class="block text-gray-700 font-medium mb-2">Nom*</label>
+                        <input type="text" id="nom" name="nom" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700">  
+                     </div>
+                  </div>
+               </div>
+               <div class="flex gap-5">
+                  <div class="w-1/2">
+                     <label for="email" class="block text-gray-700 font-medium mb-2">Adresse E-mail*</label>
+                     <input type="email" id="email"  name="email" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+                  <div class="w-1/2">
+                     <label for="phone" class="block text-gray-700 font-medium mb-2">Numéro de téléphone</label>
+                     <input type="tel" id="phone"  name="phone" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+               </div>
+               <div>
+                  <label for="adresse" class="block text-gray-700 font-medium mb-2">Adresse*</label>
+                  <input type="adresse" id="adresse"  name="adresse"  class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+               </div>
+               <div class="flex gap-5">
+                  <div class="w-1/2">
+                     <label for="d-naissance" class="block text-gray-700 font-medium mb-2">Date de naissance</label>
+                     <input type="date" id="d-naissance"  name="d-naissance" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+                  <div class="w-1/2">
+                     <label for="ville" class="block text-gray-700 font-medium mb-2">Ville</label>
+                     <input type="ville" id="ville"  name="ville" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+               </div>
+               <div class="flex gap-5">
+                  <div class="w-1/2">
+                     <label for="linkedin" class="block text-gray-700 font-medium mb-2">LinkedIn</label>
+                     <input type="url" id="linkedin"  name="linkedin" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+                  <div class="w-1/2">
+                     <label for="github" class="block text-gray-700 font-medium mb-2">GitHub / Portfolio Website</label>
+                     <input type="github" id="github"  name="github" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+               </div>
+            </form>
+            <!----------------------------------------- FORM DESCRIPTION --------- -->
+            <form id="form-2" class="w-full max-w-3xl bg-white rounded-lg space-y-6 ">
+               <div id="form-title" class="block text-center text-3xl">
+                  <h2 style="font-family: Noto Sans TC, sans-serif; font-weight: bolder;">A propos</h2>
+               </div>
+               <section class="about-section text-xl text-black pt-5">
+                  <label for="description" class="block mb-4">Description</label>
+                  <div id="editor-container" style="height: 150px; background-color: white;"></div>
+               </section>
+            </form>
+            <!--------------------------------------------- FORM EXPERIANCE PRO ---------->
+            <form class="w-full max-w-3xl bg-white rounded-lg p-2 space-y-6 " id="form-3">
+               <div id="form-title" class="block text-center text-3xl">
+                  <h2 style="font-family: Noto Sans TC, sans-serif; font-weight: bolder;">Expérience Professionnelles</h2>
+               </div >
+               <div class="flex gap-5">
+                  <div class="w-1/2">
+                     <label for="job-title" class="block text-gray-700 font-medium mb-2">Poste occupe</label>
+                     <input type="text" id="job-title" placeholder="Par ex : Front-end Devlopper" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+                  <div class="w-1/2">
+                     <label for="date-debut-ex" class="block text-gray-700 font-medium mb-2">Date</label>
+                     <input type="text" id="date-debut-ex" placeholder="2018-2020" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+               </div>
+               <div class="flex gap-5">
+                  <div class="w-1/2">
+                     <label for="company-name" class="block text-gray-700 font-medium mb-2">Nom de l'Entreprise</label>
+                     <input type="text" id="company-name" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+                  <div class="w-1/2">
+                     <label for="lieu-ex" class="block text-gray-700 font-medium mb-2">Lieu</label>
+                     <input type="text" id="lieu" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+               </div>
+               <div>
+                  <label for="desc-ex" class="block text-gray-700 font-medium mb-2">Description</label>
+                  <textarea id="desc-ex" rows="4" placeholder="Description de votre experience" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700"></textarea>
+               </div>
+
+               <div class="text-center flex justify-center ">
+                  <button id="ajoute-ex" type="button" class="mt-3 bg-green-500 font-semibold py-2 px-6 rounded-md text-white">
+                  + Ajouter une Experience 
+                  </button>
+               </div>
+            </form>
+                <!-- FORMATIONNNN -------------->
+            <form class="w-full max-w-3xl bg-white rounded-lg p-2 space-y-3 " id="form-3">
+               <div id="form-title" class="block text-center text-3xl">
+                  <h2 style="font-family: Noto Sans TC, sans-serif; font-weight: bolder;">Formation</h2>
+               </div >
+               <div class="flex gap-5">
+                  <div class="w-1/2">
+                     <label for="diplome" class="block text-gray-700 font-medium mb-2">Diplome / Certificat</label>
+                     <input type="text" id="diplome" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+                  <div class="w-1/2">
+                     <label for="etab-name" class="block text-gray-700 font-medium mb-2">Nom de l’établissement</label>
+                     <input type="text" id="etab-name" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+               </div>
+               <div class="flex gap-5">  
+                  <div class="w-1/2">
+                     <label for="lieu-fo" class="block text-gray-700 font-medium mb-2">Lieu</label>
+                     <input type="text" id="lieu-fo" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+                  <div class="w-1/2">
+                     <label for="date-fo" class="block text-gray-700 font-medium mb-2">Date</label>
+                     <input type="text" id="date-fo" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  </div>
+               </div>
+                <div class="text-center flex justify-center ">
+                  <button id="ajoute-f" type="button" class="mt-3 bg-green-500 font-semibold py-2 px-6 rounded-md text-white">
+                  + Ajouter une Formation 
+                  </button>
+               </div>
+               </form>
+               <!--------------- FORM COMPETENCE ET LANGUE ------------->
+                
+               <!-- FORM COMPÉTENCES -->
+               <form class="w-full max-w-3xl bg-white rounded-lg p-6 space-y-6" id="form-5">
+               <div id="form-title" class="block text-center text-3xl">
+                  <h2 style="font-family: Noto Sans TC, sans-serif; font-weight: bolder;">Compétences</h2>
+               </div>
+
+               <div class="flex gap-7 items-end flex-row">
+                  <div class="w-1/2">
+                     <label for="competence" class="block text-gray-700 font-medium mb-2">Compétence</label>
+                     <input type="text" id="competence" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700">
+                  </div>
+                  <div class="w-1/2">
+                     <label for="niveau-c" class="block text-gray-700 font-medium mb-2">Niveau</label>
+                     <select id="niveau-c" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700">
+                     <option>Selectionner</option>
+                     <option>Débutant</option>
+                     <option>Intermédiaire</option>
+                     <option>Avancé</option>
+                     </select>
+                  </div>
+                  <div class="text-center ">
+                  <button id="ajoute-c" type="button" class="font-semibold py-1 px-2 rounded-md text-black border-gray-300 border">
+                     +
+                  </button>
+               </div>
+               </div>
+
+               <div id="form-title" class="block text-center text-3xl">
+                  <h2 style="font-family: Noto Sans TC, sans-serif; font-weight: bolder;">Langue</h2>
+               </div>
+
+               <div class="flex gap-7 items-end flex-row">
+                  <div class="w-1/2">
+                     <label for="langue" class="block text-gray-700 font-medium mb-2">Langue</label>
+                     <input type="text" id="langue" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700">
+                  </div>
+                  <div class="w-1/2">
+                     <label for="niveau-l" class="block text-gray-700 font-medium mb-2">Niveau</label>
+                     <select id="niveau-l" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700">
+                     <option>Selectionner</option>
+                     <option>Langue maternelle</option>
+                     <option>A1</option>
+                     <option>A2</option>
+                     <option>B1</option>
+                     <option>B2</option>
+                     <option>C1</option>
+                     <option>C2</option>
+                     </select>
+                  </div>
+                  <div class="text-center ">
+                  <button id="ajoute-c" type="button" class="font-semibold py-1 px-2 rounded-md text-black border-gray-300 border">
+                     +
+                  </button>
+               </div>
+               </div>
+
+               
+               </form>
+
+                
+            
+            
+            <!------------- BUTTTTONS ---------------->
+            <section id="buttons" class="mt-10">
+               <div class="text-center flex justify-between">
+                  <button id="prev-btn"type="button" class="bg-green-500 font-semibold py-2 px-6 rounded-md">
+                  Precedent
+                  </button>
+                  <button id="next-btn"type="button" class="bg-green-500 font-semibold py-2 px-6 rounded-md">
+                  Suivant 
+                  </button>
+               </div>
+            </section>
+         </section>
+      </main>
+      <script src="./assets/script.js"></script>
+   </body>
+</html>

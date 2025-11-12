@@ -12,6 +12,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    </head>
    <body>
       <header>
@@ -81,10 +82,12 @@
                      <div class="w-1/2">
                         <label for="prenom" class="block text-gray-700 font-medium mb-2">Prenom*</label>
                         <input type="text" id="prenom" name="prenom" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700">
+                        <span class="form-error text-xs h-5px"></span>
                      </div>
                      <div class="w-1/2">
                         <label for="nom" class="block text-gray-700 font-medium mb-2">Nom*</label>
-                        <input type="text" id="nom" name="nom" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700">  
+                        <input type="text" id="nom" name="nom" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700"> 
+                        <span class="form-error text-xs h-5"></span>
                      </div>
                   </div>
                </div>
@@ -92,34 +95,41 @@
                   <div class="w-1/2">
                      <label for="email" class="block text-gray-700 font-medium mb-2">Adresse E-mail*</label>
                      <input type="email" id="email"  name="email" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                   <div class="w-1/2">
                      <label for="phone" class="block text-gray-700 font-medium mb-2">Numéro de téléphone</label>
                      <input type="tel" id="phone"  name="phone" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                </div>
                <div>
                   <label for="adresse" class="block text-gray-700 font-medium mb-2">Adresse*</label>
                   <input type="adresse" id="adresse"  name="adresse"  class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                  <span class="form-error text-xs"></span>
                </div>
                <div class="flex gap-5">
                   <div class="w-1/2">
                      <label for="d-naissance" class="block text-gray-700 font-medium mb-2">Date de naissance</label>
                      <input type="date" id="d-naissance"  name="d-naissance" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                   <div class="w-1/2">
                      <label for="ville" class="block text-gray-700 font-medium mb-2">Ville</label>
                      <input type="ville" id="ville"  name="ville" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                </div>
                <div class="flex gap-5">
                   <div class="w-1/2">
                      <label for="linkedin" class="block text-gray-700 font-medium mb-2">LinkedIn</label>
                      <input type="url" id="linkedin"  name="linkedin" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                   <div class="w-1/2">
                      <label for="github" class="block text-gray-700 font-medium mb-2">GitHub / Portfolio Website</label>
                      <input type="github" id="github"  name="github" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                </div>
             </form>
@@ -142,29 +152,38 @@
                   <div class="w-1/2">
                      <label for="job-title" class="block text-gray-700 font-medium mb-2">Poste occupe</label>
                      <input type="text" id="job-title" placeholder="Par ex : Front-end Devlopper" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                   <div class="w-1/2">
                      <label for="date-debut-ex" class="block text-gray-700 font-medium mb-2">Date</label>
                      <input type="text" id="date-debut-ex" placeholder="2018-2020" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                </div>
                <div class="flex gap-5">
                   <div class="w-1/2">
                      <label for="company-name" class="block text-gray-700 font-medium mb-2">Nom de l'Entreprise</label>
                      <input type="text" id="company-name" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                   <div class="w-1/2">
                      <label for="lieu-ex" class="block text-gray-700 font-medium mb-2">Lieu</label>
                      <input type="text" id="lieu" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                </div>
                <div>
                   <label for="desc-ex" class="block text-gray-700 font-medium mb-2">Description</label>
                   <textarea id="desc-ex" rows="4" placeholder="Description de votre experience" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700"></textarea>
                </div>
+                  <div id="experience-list">
+                     
+
+                  </div>
+
 
                <div class="text-center flex justify-center ">
-                  <button id="ajoute-ex" type="button" class="mt-3 bg-green-500 font-semibold py-2 px-6 rounded-md text-white">
+                  <button id="ajoute-ex" type="button" onclick="addExperience()" class="mt-3 bg-green-500 font-semibold py-2 px-6 rounded-md text-white">
                   + Ajouter une Experience 
                   </button>
                </div>
@@ -178,24 +197,31 @@
                   <div class="w-1/2">
                      <label for="diplome" class="block text-gray-700 font-medium mb-2">Diplome / Certificat</label>
                      <input type="text" id="diplome" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                   <div class="w-1/2">
                      <label for="etab-name" class="block text-gray-700 font-medium mb-2">Nom de l’établissement</label>
                      <input type="text" id="etab-name" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                </div>
                <div class="flex gap-5">  
                   <div class="w-1/2">
                      <label for="lieu-fo" class="block text-gray-700 font-medium mb-2">Lieu</label>
                      <input type="text" id="lieu-fo" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                   <div class="w-1/2">
                      <label for="date-fo" class="block text-gray-700 font-medium mb-2">Date</label>
                      <input type="text" id="date-fo" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <span class="form-error text-xs"></span>
                   </div>
                </div>
+               <div id="formation-list">
+
+               </div>
                 <div class="text-center flex justify-center ">
-                  <button id="ajoute-f" type="button" class="mt-3 bg-green-500 font-semibold py-2 px-6 rounded-md text-white">
+                  <button id="ajoute-f" type="button" onclick="addFormation()" class="mt-3 bg-green-500 font-semibold py-2 px-6 rounded-md text-white">
                   + Ajouter une Formation 
                   </button>
                </div>
@@ -212,6 +238,7 @@
                   <div class="w-1/2">
                      <label for="competence" class="block text-gray-700 font-medium mb-2">Compétence</label>
                      <input type="text" id="competence" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700">
+                     <span class="form-error text-xs"></span>
                   </div>
                   <div class="w-1/2">
                      <label for="niveau-c" class="block text-gray-700 font-medium mb-2">Niveau</label>
@@ -223,11 +250,15 @@
                      </select>
                   </div>
                   <div class="text-center ">
-                  <button id="ajoute-c" type="button" class="font-semibold py-1 px-2 rounded-md text-black border-gray-300 border">
+                  <button id="ajoute-c" type="button" onclick="addCompetence()" class="font-semibold py-1 px-2 rounded-md text-black border-gray-300 border">
                      +
                   </button>
+                  </div>
                </div>
+               <div id="competence-list-c">
+
                </div>
+               <!-- FORM LANGUE -->
 
                <div id="form-title" class="block text-center text-3xl">
                   <h2 style="font-family: Noto Sans TC, sans-serif; font-weight: bolder;">Langue</h2>
@@ -237,6 +268,7 @@
                   <div class="w-1/2">
                      <label for="langue" class="block text-gray-700 font-medium mb-2">Langue</label>
                      <input type="text" id="langue" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700">
+                     <span class="form-error text-xs"></span>
                   </div>
                   <div class="w-1/2">
                      <label for="niveau-l" class="block text-gray-700 font-medium mb-2">Niveau</label>
@@ -252,10 +284,14 @@
                      </select>
                   </div>
                   <div class="text-center ">
-                  <button id="ajoute-c" type="button" class="font-semibold py-1 px-2 rounded-md text-black border-gray-300 border">
+                  <button id="ajoute-c" type="button" onclick="addLangue()" class="font-semibold py-1 px-2 rounded-md text-black border-gray-300 border">
                      +
                   </button>
                </div>
+               
+               </div>
+               <div id="langue-list">
+                  
                </div>
 
                

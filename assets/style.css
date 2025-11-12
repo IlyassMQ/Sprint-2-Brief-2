@@ -23,7 +23,7 @@ form{
 }
 
 .custum-file-upload {
-height: 150px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -36,6 +36,7 @@ height: 150px;
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+
 }
 
 .custum-file-upload .icon {
@@ -45,7 +46,7 @@ height: 150px;
 }
 
 .custum-file-upload .icon img {
-  height: 8vh;
+  height: 5vh;
 }
 
 .custum-file-upload .text {
@@ -55,5 +56,17 @@ height: 150px;
 .custum-file-upload .text span {
   font-weight: 400;
   color: rgba(75, 85, 99, 1);
+}
+.list-ex{
+  border: 2px solid darkgrey;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 3%;
+  height: 50px;
+  margin-bottom: 10px;
 }
 

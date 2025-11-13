@@ -13,6 +13,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <meta name="description" content="CV maker Website">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js" integrity="sha512-D25Z8/1q2z65ZpJ3NzY6XiPZfwjhbv34OTQHDIZd+KPK+uWCovGt+fMkSzW8ArzCMFUgZt6Cdu7qoXNuy6a2GA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    </head>
    <body>
       <header>
@@ -61,7 +63,7 @@
             </div>
          </section>
          <!--------------------------------------- FORM PERSSONEL  ----------->
-         <section class="w-full max-w-3xl bg-white rounded-lg p-8 border border-gray-200">
+         <section class="w-full max-w-3xl bg-white rounded-lg p-8 border border-gray-200" id="forms">
             <form action="#" method="POST" class="space-y-6" id="form-1">
                <div id="form-title" class="block text-center text-3xl">
                   <h2 style="font-family: Noto Sans TC, sans-serif; font-weight: bolder;">Informations Perssonnel</h2>
@@ -87,7 +89,7 @@
                      <div class="w-1/2">
                         <label for="nom" class="block text-gray-700 font-medium mb-2">Nom*</label>
                         <input type="text" id="nom" name="nom" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700"> 
-                        <span class="form-error text-xs h-5"></span>
+                        <span class="form-error text-xs"></span>
                      </div>
                   </div>
                </div>
@@ -128,7 +130,7 @@
                   </div>
                   <div class="w-1/2">
                      <label for="github" class="block text-gray-700 font-medium mb-2">GitHub / Portfolio Website</label>
-                     <input type="github" id="github"  name="github" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
+                     <input type="url" id="github"  name="github" class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700" >
                      <span class="form-error text-xs"></span>
                   </div>
                </div>
@@ -182,9 +184,10 @@
                   </div>
 
 
-               <div class="text-center flex justify-center ">
+               <div class="text-center flex justify-center gap-7">
+                  
                   <button id="ajoute-ex" type="button" onclick="addExperience()" class="mt-3 bg-green-500 font-semibold py-2 px-6 rounded-md text-white">
-                  + Ajouter une Experience 
+                   <i class="fa-solid fa-floppy-disk"></i> Enrengistrer Experience 
                   </button>
                </div>
             </form>
@@ -192,7 +195,7 @@
             <form class="w-full max-w-3xl bg-white rounded-lg p-2 space-y-3 " id="form-3">
                <div id="form-title" class="block text-center text-3xl">
                   <h2 style="font-family: Noto Sans TC, sans-serif; font-weight: bolder;">Formation</h2>
-               </div >
+               </div>
                <div class="flex gap-5">
                   <div class="w-1/2">
                      <label for="diplome" class="block text-gray-700 font-medium mb-2">Diplome / Certificat</label>
@@ -220,9 +223,10 @@
                <div id="formation-list">
 
                </div>
-                <div class="text-center flex justify-center ">
+                <div class="text-center flex justify-center gap-7">
+                  
                   <button id="ajoute-f" type="button" onclick="addFormation()" class="mt-3 bg-green-500 font-semibold py-2 px-6 rounded-md text-white">
-                  + Ajouter une Formation 
+                  <i class="fa-solid fa-floppy-disk"></i> Enrengistrer Formation 
                   </button>
                </div>
                </form>
@@ -249,9 +253,9 @@
                      <option>Avancé</option>
                      </select>
                   </div>
-                  <div class="text-center ">
+                  <div class="text-center flex flex-row">
                   <button id="ajoute-c" type="button" onclick="addCompetence()" class="font-semibold py-1 px-2 rounded-md text-black border-gray-300 border">
-                     +
+                     <i class="fa-solid fa-floppy-disk"></i>
                   </button>
                   </div>
                </div>
@@ -285,7 +289,7 @@
                   </div>
                   <div class="text-center ">
                   <button id="ajoute-c" type="button" onclick="addLangue()" class="font-semibold py-1 px-2 rounded-md text-black border-gray-300 border">
-                     +
+                     <i class="fa-solid fa-floppy-disk"></i>
                   </button>
                </div>
                
@@ -295,13 +299,28 @@
                </div>
 
                
-               </form>
+            </form>
+            <form id="form-6" class="w-full max-w-3xl bg-white rounded-lg space-y-6 ">
+               <div id="form-title" class="block text-center text-3xl">
+                  <h2 style="font-family: Noto Sans TC, sans-serif; font-weight: bolder;">Choisir un modèle</h2>
+               </div>
+               <section class="flex flex-row space-x-6 justify-around pt-5 ">
+                  <div class=" space-y-6 flex flex-col justify-center ">
+                     <img src="./assets/img/Capture d'écran 2025-11-13 234313.png" alt="first-CV" style="width: 15vw;border: 1px solid;border-radius: 5px;">
+                     <button id="template-1" type="button" class="bg-green-500 font-semibold py-2 px-6 rounded-md text-white">Choisir ça</button>
+                  </div>
+                   <div class="space-y-6 flex flex-col justify-center ">
+                     <img src="./assets/img/Capture d'écran 2025-11-13 234027.png" alt="first-CV" style="width: 15vw;border: 1px solid;border-radius: 5px;">
+                     <button id ="template-2"type="button" class="bg-green-500 font-semibold py-2 px-6 rounded-md text-white">Choisir ça</button>
+                  </div>
+               </section>
+            </form>
 
                 
             
             
             <!------------- BUTTTTONS ---------------->
-            <section id="buttons" class="mt-10">
+         <section id="buttons" class="mt-10">
                <div class="text-center flex justify-between">
                   <button id="prev-btn"type="button" class="bg-green-500 font-semibold py-2 px-6 rounded-md">
                   Precedent
@@ -313,6 +332,10 @@
             </section>
          </section>
       </main>
+       <div id="cv_template" class="hidden">   
+     
+      </div>
+         
       <script src="./assets/script.js"></script>
    </body>
 </html>
